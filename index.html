@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Escape</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <div id="ui-overlay">
+            <button id="skip-btn" onclick="skipLevel()">Skip Level (.)</button>
+
+            <div id="minimap">
+                <canvas id="minimap-canvas"></canvas>
+            </div>
+
+            <div id="inventory">
+                <div class="inventory-title">INVENTORY</div>
+                <div class="inventory-slots">
+                    <div class="inv-slot" id="slot-1"></div>
+                    <div class="inv-slot" id="slot-2"></div>
+                    <div class="inv-slot" id="slot-3"></div>
+                    <div class="inv-slot" id="slot-4"></div>
+                    <div class="inv-slot" id="slot-5"></div>
+                </div>
+            </div>
+
+            <div id="objective">Find the PC and solve the puzzle</div>
+
+            <div id="interaction-prompt" class="hidden">Press E to interact</div>
+
+            <button id="skip-btn" onclick="skipLevel()">Skip Level (.)</button>
+        </div>
+
+        <div id="puzzle-overlay" class="hidden">
+            <div class="puzzle-window">
+                <div class="puzzle-header">
+                    <span id="puzzle-title">PASSWORD SECURITY</span>
+                    <button class="close-btn" onclick="closePuzzle()">✕</button>
+                </div>
+                <div class="puzzle-content" id="puzzle-content"></div>
+            </div>
+        </div>
+
+        <div id="start-screen">
+            <div class="bg-animation">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+                <div class="floating-shape shape-4"></div>
+                <div class="floating-shape shape-5"></div>
+            </div>
+            <div class="start-content">
+                <h1>CYBER ESCAPE</h1>
+                <p>Navigate the facility. Solve puzzles. Escape.</p>
+                <button id="startButton" class="start-btn">[ START GAME ]</button>
+                <p class="controls-hint">WASD to move | Mouse to look | E to interact</p>
+            </div>
+        </div>
+
+        <div id="victory-screen" class="hidden">
+            <div class="bg-animation">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+                <div class="floating-shape shape-4"></div>
+                <div class="floating-shape shape-5"></div>
+            </div>
+            <div class="victory-content">
+                <h1>ESCAPED!</h1>
+                <p>You have successfully escaped the facility.</p>
+                <button class="start-btn" onclick="location.reload()">[ PLAY AGAIN ]</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+
+</html>

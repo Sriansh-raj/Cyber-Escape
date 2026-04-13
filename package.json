@@ -1,0 +1,19 @@
+{
+  "name": "gamefied-website",
+  "version": "1.0.0",
+  "description": "An interactive first-person maze game that teaches cybersecurity concepts through puzzles and exploration.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "jimp": "^1.6.1"
+  }
+}
